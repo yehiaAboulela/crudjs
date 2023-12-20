@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <div class="w-75 mx-auto bg-info p-5">
+        <h1 class="text-center">CRUD SYSTIM</h1>
+
+        <form action="">
+          <div class="mb-3">
+            <label for="productName">Product Name</label>
+            <input
+              type="text"
+              id="productName"
+              class="form-control"
+              oninput="validationName()"
+            />
+            <div class="alert alert-danger d-none" id="nameAlert">
+              name should start with capital letter
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="productCatigory">Product catigory</label>
+            <input type="text" id="productCatigory" class="form-control" />
+          </div>
+          <div class="mb-3">
+            <label for="productPrice">Product price</label>
+            <input
+              type="text"
+              id="productPrice"
+              class="form-control"
+              oninput="validationPrice()"
+            />
+            <div class="alert alert-danger d-none" id="priceAlert">
+              price should be a number
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="productDescription">Product description</label>
+            <textarea id="productDescription" class="form-control"></textarea>
+          </div>
+
+          <button class="btn btn-primary w-100 my-3 py-2" id="addBtn">
+            ADD
+          </button>
+        </form>
+
+        <table class="table text-center mt-4 table-bordered table-dark">
+          <input
+            type="search"
+            class="form-control w-50 mx-auto"
+            id="search"
+            placeholder="search"
+            oninput="display_SearchLogic()"
+          />
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Catigory</th>
+              <th>Price</th>
+              <th>Description</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </main>
+
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

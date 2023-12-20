@@ -1,0 +1,17 @@
+.delete,
+.update {
+  border: none;
+  cursor: pointer;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+.delete {
+  background-color: red;
+  color: white;
+}
+.update {
+  background-color: rgb(49, 204, 49);
+}
+.searchActive {
+  background-color: rgb(75, 75, 75) !important;
+}
